@@ -14,7 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      Leads: {
+        Row: {
+          empresa: string
+          etapa: Database["public"]["Enums"]["etapa"]
+          nome: string | null
+          valor: number
+        }
+        Insert: {
+          empresa: string
+          etapa?: Database["public"]["Enums"]["etapa"]
+          nome?: string | null
+          valor?: number
+        }
+        Update: {
+          empresa?: string
+          etapa?: Database["public"]["Enums"]["etapa"]
+          nome?: string | null
+          valor?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +43,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      etapa: "novo" | "em contato" | "fechado"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +170,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      etapa: ["novo", "em contato", "fechado"],
+    },
   },
 } as const
