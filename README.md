@@ -26,10 +26,16 @@ npm run dev
 ```
 
 Sugestões da IA: Usar o cloud da própria lovable, criar um type próprio para os estados de novo, em contato, fechado
+
 Aceito: Type especifico para etapas
+
 Negado: Cloud da lovable, foi utilizado o supabase para banco de dados
 
+
 Onde este dado fica guardado?
+
 Os clientes ficam guardados no Supabase
+
 O que acontece se eu apagar esta linha no Supabase?
+
 Ela é removida também na tabela do site do lovable
